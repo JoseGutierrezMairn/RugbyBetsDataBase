@@ -1,0 +1,14 @@
+/*Yo Miguel Serpa nacido el día 08/10/86, oriundo de Bogotá- Colombia, me quiero registrar en Mercado Mundial de Rugby, ya que deseo conocer acerca de las transferencias que existan en este deporte y además realizar apuestas sobre los encuentros deportivos del mismo.*/
+
+EXECUTE PC_USUARIO.AD_USUARIO ('Miguel Serpa','Colombia','08/10/1986');
+/*Como actual usuario de Mercado Mundial de Rugby quiero saber que equipos existen en una liga en concreto y de esta forma conocer si hay algun equipo en especifico al que quiero apostarle*/
+
+SELECT PA_USUARIO.CO_Equipos FROM dual;
+
+/*Ademas de saber que equipos hay, también quisiera realizar una apuesta con respecto a un jugador favorito*/
+/*Para esto necesito saber cual es el numero de identificación del jugador*/
+SELECT PA_USUARIO_CO_JUGADOR FROM dual;
+
+/*De acuerdo al numero del jugador realizo una apuesta*/
+EXECUTE PA_APUESTAS.AD__APUESTAS_JUGADOR (17,2,sysdate,2500);
+
